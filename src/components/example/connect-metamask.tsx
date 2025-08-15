@@ -18,7 +18,7 @@ export default function ConnectMetaMask() {
         if (!CONTRACT_ADDRESS) return null;
 
         if (typeof window.ethereum !== "undefined") {
-            await (window as any).ethereum.request({ method: "eth_requestAccounts" });
+            await window.ethereum.request({ method: "eth_requestAccounts" });
             const provider = new ethers.BrowserProvider(window.ethereum);
             const signer = await provider.getSigner();
             const contract = new ethers.Contract(CONTRACT_ADDRESS, lockContract.abi, signer);
