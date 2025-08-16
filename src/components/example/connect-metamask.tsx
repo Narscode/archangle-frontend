@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import lockContract from "@/utils/Lock.json";
+import lockContract from "@/utils/Smart-Contract.json";
 
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
 
